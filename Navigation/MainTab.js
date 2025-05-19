@@ -227,7 +227,7 @@ export default function App() {
                     fontWeight: "medium",
                   }}
                 >
-                  You
+                  Youu
                 </Text>
               ),
               tabBarIcon: ({ focused, color, size }) => {

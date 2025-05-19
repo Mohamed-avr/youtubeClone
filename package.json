@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@react-navigation/bottom-tabs": "^7.3.10",
+    "@react-navigation/native-stack": "^7.3.13",
     "expo": "^53.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
