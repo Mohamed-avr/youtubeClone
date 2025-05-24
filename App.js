@@ -1,14 +1,13 @@
 import { View, Text } from "react-native";
 import React from "react";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
 
 const Stack = createNativeStackNavigator();
 
 // Screens
-import MainTab from "./Navigation/MainTab";
+import MainTab from "./MainTab/Index";
+
 export default function App() {
   return (
     <NavigationContainer>
