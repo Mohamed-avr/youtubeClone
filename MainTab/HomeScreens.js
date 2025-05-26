@@ -16,7 +16,7 @@ export default function HomeScreen() {
       style={[
         styles.container,
         {
-          paddingHorizontal: Platform.OS === "android" ? 24 : 0,
+          paddingHorizontal: Platform.OS === "android" ? 0 : 0,
           marginTop: StatusBar.currentHeight,
         },
       ]}
