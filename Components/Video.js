@@ -5,21 +5,61 @@ import {
   StatusBar,
   Platform,
   Pressable,
+  Image,
+  ImageBackground,
 } from "react-native";
 import React from "react";
 
 export default function Video() {
   return (
     <View style={[styles.container, {}]}>
-      <View style={styles.topContainer}> </View>
+      <View style={styles.topContainer}>
+        <ImageBackground
+          source={{
+            uri: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+          }}
+          style={{ width: "100%", height: "100%" }}
+          resizeMode="cover"
+        />
+        <View
+          style={{
+            position: "absolute",
+            bottom: 10,
+            right: 10,
+            backgroundColor: "#00000080",
+            padding: 5,
+            borderRadius: 5,
+            zIndex: 1,
+          }}
+        >
+          <Text
+            style={{
+              color: "#fff",
+              fontSize: 12,
+              fontWeight: "bold",
+              textAlign: "center",
+            }}
+          >
+            32:23
+          </Text>
+        </View>
+      </View>
       <View style={styles.bottomContainer}>
         <View style={styles.top}>
           <View style={styles.insideTop}>
-            <View style={styles.channelAvatar}></View>
+            <View style={styles.channelAvatar}>
+              <ImageBackground
+                source={{
+                  uri: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+                }}
+                style={{ width: "100%", height: "100%" }}
+                resizeMode="cover"
+              />
+            </View>
             <View style={styles.TitlesContent}>
               <Text style={styles.videoTitle}>The racism and truth</Text>
               <Text style={styles.videoDetails}>
-                Dark Country Music - 34K views - 2 months ago
+                Dark Country Music • 34K views • 2 months ago
               </Text>
             </View>
           </View>
@@ -36,7 +76,7 @@ export default function Video() {
               transform: [{ rotate: "90deg" }],
             }}
           >
-            <Text style={styles.settingsDots}>{". . . "}</Text>
+            <Text style={styles.settingsDots}>{". . ."}</Text>
           </Pressable>
         </View>
       </View>
@@ -52,11 +92,13 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 270,
     margin: 0,
+    position: "relative",
   },
 
   topContainer: {
     width: "100%",
     height: 180,
+    position: "relative",
     backgroundColor: "hsl(214, 68.90%, 57.10%)",
   },
   bottomContainer: {
@@ -83,6 +125,8 @@ const styles = StyleSheet.create({
     height: 35,
     backgroundColor: "#888",
     borderRadius: 50,
+    overflow: "hidden",
+    justifyContent: "center",
   },
   TitlesContent: {
     flexDirection: "column",
