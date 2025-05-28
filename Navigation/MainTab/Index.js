@@ -37,6 +37,7 @@ export default function App() {
             elevation: 0,
             shadowColor: "transparent",
             backgroundColor: "rgba(185, 185, 185, 0.1)",
+            // backgroundColor: "#222",
             borderTopWidth: 0,
             borderWidth: 0,
             borderColor: "#d8d8d8",

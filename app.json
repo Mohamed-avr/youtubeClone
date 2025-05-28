@@ -1,4 +1,7 @@
 {
   "name": "youtubeClone",
-  "slug": "youtubeClone"
+  "slug": "youtubeClone",
+  "plugins": [
+    "expo-router"
+  ]
 }

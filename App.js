@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const Stack = createNativeStackNavigator();
 
 // Screens
-import MainTab from "./MainTab/Index";
+import MainTab from "./Navigation/MainTab/Index";
 
 export default function App() {
   return (

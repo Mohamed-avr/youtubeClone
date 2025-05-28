@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     backgroundColor: "#101010",
     width: "100%",
-    height: 270,
+    height: 250,
     margin: 0,
     position: "relative",
   },
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     width: "100%",
-    height: 90,
+    height: 80,
     padding: 14,
     backgroundColor: "#101010",
   },
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "800",
     rotation: "30deg",
-    left: 2,
+    left: 1,
     top: -3,
   },
 });
