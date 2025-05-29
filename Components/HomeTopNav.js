@@ -31,7 +31,7 @@ export default function HomeTopNav() {
             textTransform: "uppercase",
           }}
         >
-          youtube
+          youtube...
         </Text>
       </View>
     </View>
