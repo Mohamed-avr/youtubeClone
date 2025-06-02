@@ -6,13 +6,14 @@ import {
   StyleSheet,
   StatusBar,
   ScrollView,
+  Pressable,
 } from "react-native";
 
 // Components
 import Video from "../../Components/Video";
 import HomeTopNav from "../../Components/HomeTopNav";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <View
       style={[
@@ -45,7 +46,21 @@ export default function HomeScreen() {
         >
           <View style={styles.videosContainer}>
             {[...Array(4)].map((_, i) => (
-              <Video key={i} />
+              <Pressable
+                key={i}
+                onPress={() =>
+                  navigation.navigate("VideoScreen", {
+                    videoID: i,
+                    videoInfo: {
+                      nameV: "videooo ",
+                      channelName: "Channel Name",
+                      videoLikes: 243,
+                    },
+                  })
+                }
+              >
+                <Video key={i} />
+              </Pressable>
             ))}
           </View>
         </ScrollView>

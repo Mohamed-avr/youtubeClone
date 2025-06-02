@@ -7,6 +7,7 @@ const Stack = createNativeStackNavigator();
 
 // Screens
 import MainTab from "./Navigation/MainTab/Index";
+import VideoScreen from "./Screens/VideoScreen";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         }}
       >
         <Stack.Screen name="MainTab" component={MainTab} />
+        <Stack.Screen name="VideoScreen" component={VideoScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
