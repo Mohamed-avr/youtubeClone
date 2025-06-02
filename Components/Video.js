@@ -12,7 +12,7 @@ import React from "react";
 
 export default function Video() {
   return (
-    <View style={[styles.container, {}]}>
+    <View style={styles.container}>
       <View style={styles.topContainer}>
         <ImageBackground
           source={{
@@ -24,8 +24,8 @@ export default function Video() {
         <View
           style={{
             position: "absolute",
-            bottom: 10,
-            right: 10,
+            top: 143,
+            left: "86%",
             backgroundColor: "#00000080",
             padding: 5,
             borderRadius: 5,
