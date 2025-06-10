@@ -1,17 +1,17 @@
 import {
   View,
-  Text,
-  SafeAreaView,
   Platform,
   StyleSheet,
   StatusBar,
   ScrollView,
   Pressable,
 } from "react-native";
+import { navigation } from "@react-navigation/native";
 
 // Components
-import Video from "../../Components/Video";
+import Video from "../../Components/VideoTemplate";
 import HomeTopNav from "../../Components/HomeTopNav";
+import VideoTemplate from "../../Components/VideoTemplate";
 
 export default function HomeScreen({ navigation }) {
   return (
@@ -30,9 +30,9 @@ export default function HomeScreen({ navigation }) {
       <View
         style={{
           width: "100%",
-          height: "79%",
-          overflow: "hidden",
-          backgroundColor: "rgba(15, 15, 15, 1)",
+          height: "84%",
+          // overflow: "hidden",
+          // backgroundColor: "rgba(15, 15, 15, 1)",
         }}
       >
         <ScrollView
@@ -41,7 +41,7 @@ export default function HomeScreen({ navigation }) {
           bounces={true}
           style={{
             width: "100%",
-            height: "79%",
+            height: "100%",
           }}
         >
           <View style={styles.videosContainer}>
@@ -49,17 +49,46 @@ export default function HomeScreen({ navigation }) {
               <Pressable
                 key={i}
                 onPress={() =>
-                  navigation.navigate("VideoScreen", {
-                    videoID: i,
-                    videoInfo: {
-                      nameV: "videooo ",
-                      channelName: "Channel Name",
-                      videoLikes: 243,
-                    },
-                  })
+                  navigation.navigate(
+                    "VideoScreen",
+                    //   passing parameters
+                    {
+                      videoID: i,
+                      videoInfo: {
+                        nameVideo:
+                          "surviving a deadly blizzard | -21 C Challenge in the frozen Wilderness",
+                        channelName: "Channel Name",
+                        videoLikes: 243,
+                        videoDescription: "This is a sample video description.",
+                        videoHashs: "#videohash #jdid #ksks #kkls",
+                        videoComments: {
+                          comment1: {
+                            user: "User1",
+                            comment: "Great video!",
+                            likes: 10,
+                            replies: [
+                              {
+                                user: "User2",
+                                comment: "I agree!",
+                                likes: 5,
+                              },
+                            ],
+                          },
+                          comment2: {
+                            user: "User3",
+                            comment: "Nice content!",
+                            likes: 8,
+                            replies: [],
+                          },
+                        },
+                        videoViews: 1000,
+                        videoUploadDate: "2025-06-10",
+                      },
+                    }
+                  )
                 }
               >
-                <Video key={i} />
+                <VideoTemplate key={i} />
               </Pressable>
             ))}
           </View>
@@ -76,6 +105,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     flex: 1,
     height: "100%",
+    width: "100%",
     backgroundColor: "rgba(15, 15, 15, 1)",
   },
   videosContainer: {

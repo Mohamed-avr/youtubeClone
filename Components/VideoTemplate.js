@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import React from "react";
 
-export default function Video() {
+export default function VideoTemplate() {
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>

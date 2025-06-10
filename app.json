@@ -2,6 +2,17 @@
   "name": "youtubeClone",
   "slug": "youtubeClone",
   "plugins": [
-    "expo-router"
-  ]
+    "expo-router",
+    "expo-video",
+    [
+      "expo-video",
+      { "supportsBackgroundPlayback": true, "supportsPictureInPicture": true }
+    ]
+  ],
+  "android": {
+    "package": "com.anonymous.youtubeClone"
+  },
+  "ios": {
+    "bundleIdentifier": "com.anonymous.youtubeClone"
+  }
 }

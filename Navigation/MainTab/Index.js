@@ -28,7 +28,7 @@ export default function App() {
             position: "absolute",
             bottom: 0,
             width: "100%",
-            marginBottom: 45,
+            // marginBottom: 45,
             paddingBottom: 4,
             left: 0,
             height: "auto",
