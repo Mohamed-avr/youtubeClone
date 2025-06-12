@@ -6,13 +6,14 @@ import {
   StyleSheet,
   StatusBar,
   ImageBackground,
+  Icon,
 } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import {
   createStaticNavigation,
   useNavigation,
 } from "@react-navigation/native";
-
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 // to be commited
 export default function VideoScreen({
@@ -68,13 +69,24 @@ export default function VideoScreen({
         <View style={styles.videoDetails}>
           <Text style={styles.videoTitle}>{videoTitle}</Text>
           <Text style={styles.videoDetails}>
-            {videoViews} • {videoUploadDate}
+            {videoViews} • {videoUploadDate}{" "}
+            <Text style={styles.seeMoreButton}> ...more</Text>
           </Text>
         </View>
       </View>
 
+      <View style={styles.channel}>
+        <View style={styles.channelInfo}>
+          {/* <Text style={styles.channelSubscribers}>{channelSubscribers}</Text> */}
+        </View>
+
+        <View style={{ backgroundColor: "blue" }}>
+          <Ionicons name="notifications-outline" size={24} color="black" />
+        </View>
+      </View>
+
       <Pressable
-        style={{ width: "100%", height: 50, backgroundColor: "#fff" }}
+        style={{ width: "90%", height: 50, backgroundColor: "#fff" }}
         onPress={() => {
           navigation.goBack();
         }}
@@ -125,7 +137,7 @@ const styles = StyleSheet.create({
     fontWeight: "400",
     color: "#A7A7A7",
     width: "100%",
-    marginTop: 4,
+    marginTop: 8,
   },
 
   settingsDots: {
@@ -135,5 +147,18 @@ const styles = StyleSheet.create({
     rotation: "30deg",
     left: 1,
     top: -3,
+  },
+
+  seeMoreButton: {
+    fontSize: 12,
+    fontWeight: "400",
+    color: "#eee",
+  },
+
+  channel: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
+    backgroundColor: "red",
   },
 });
