@@ -37,7 +37,7 @@ export default function HomeScreen({ navigation }) {
       >
         <ScrollView
           contentContainerStyle={{ alignItems: "center" }}
-          showsVerticalScrollIndicator={true}
+          showsVerticalScrollIndicator={false}
           bounces={true}
           style={{
             width: "100%",

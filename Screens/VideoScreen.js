@@ -80,8 +80,9 @@ export default function VideoScreen({
           {/* <Text style={styles.channelSubscribers}>{channelSubscribers}</Text> */}
         </View>
 
-        <View style={{ backgroundColor: "blue" }}>
+        <View style={{ backgroundColor: "#eee", flexDirection: "row" }}>
           <Ionicons name="notifications-outline" size={24} color="black" />
+          <Ionicons name="chevron-down-outline" size={24} color="black" />
         </View>
       </View>
 
