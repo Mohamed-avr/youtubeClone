@@ -156,6 +156,6 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     rotation: "30deg",
     left: 1,
-    top: -3,
+    top: 8,
   },
 });

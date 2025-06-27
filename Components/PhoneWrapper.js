@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     margin: "auto",
     padding: 3,
     zIndex: 10,
+    position: "relative",
   },
   btnOff: {
     position: "absolute",
@@ -71,15 +72,20 @@ const styles = StyleSheet.create({
   CameraView: {
     width: "100%",
     height: 50,
-    backgroundColor: "#F2F2F2",
+    backgroundColor: "blur",
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
     justifyContent: "center",
     alignItems: "center",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    zIndex: 10,
   },
   camera: {
     width: 130,
     height: 32,
     borderRadius: 50,
-    marginTop: 8,
+    marginTop: 0,
     backgroundColor: "#000",
   },
 });

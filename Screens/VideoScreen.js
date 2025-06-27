@@ -50,8 +50,8 @@ export default function VideoScreen({
 }) {
   const navigation = useNavigation();
   const route = useRoute();
-  const { videoID } = route.params;
-  const { videoInfo } = route.params;
+  // const { videoID } = route.params;
+  // const { videoInfo } = route.params;
 
   return (
     <View style={styles.Container}>
@@ -101,7 +101,7 @@ export default function VideoScreen({
 const styles = StyleSheet.create({
   Container: {
     justifyContent: "flex-start",
-    marginTop: StatusBar.currentHeight,
+    // marginTop: StatusBar.currentHeight,
     alignItems: "center",
     overflow: "hidden",
     flex: 1,
@@ -123,7 +123,6 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     padding: 12,
     width: "100%",
-    paddingHorizontal: 24,
   },
   videoTitle: {
     fontSize: 17,

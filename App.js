@@ -19,8 +19,8 @@ export default function App() {
             headerShown: false,
           }}
         >
-          <Stack.Screen name="MainTab" component={MainTab} />
           <Stack.Screen name="VideoScreen" component={VideoScreen} />
+          <Stack.Screen name="MainTab" component={MainTab} />
         </Stack.Navigator>
       </NavigationContainer>
     </PhoneWrapper>
